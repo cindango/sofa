@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
 
+ruby '1.9.3p194'
+
 group :production do
   gem 'pg'
 end
