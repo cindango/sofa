@@ -1,6 +1,8 @@
 <tr>
   <td><%= thing.description %></td>
   <td><%= link_to 'Show', thing %></td>
-  <td><%= link_to 'Edit', edit_thing_path(thing) %></td>
-  <td><%= link_to 'Destroy', thing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% if current_user == thing.user %>
+  	<td><%= link_to 'Edit', edit_thing_path(thing) %></td>
+  	<td><%= link_to 'Destroy', thing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
 </tr>

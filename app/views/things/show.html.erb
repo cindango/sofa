@@ -4,7 +4,12 @@
 			<p>
 			  <%= @thing.description %>
 			</p>
-				<%= link_to 'Edit', edit_thing_path(@thing) %> |
+			<p>
+			  <%= @thing.user.name %>
+			</p>
+				<% if current_user == @thing.user %>
+					<%= link_to 'Edit', edit_thing_path(@thing) %> |
+				<% end %>
 				<%= link_to 'Back', things_path %>
 		</div>
 	</div>
