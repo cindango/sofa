@@ -1,11 +1,13 @@
-<div class="row">
-  <div class="col-md-4"><h2>Navigation Bar</h2></div>
-  <div class="col-md-8">
+<% if user_signed_in? %>
+	<h1>You're logged in</h1>
+<% else %>
+
+<div class="hero-unit">
 	  <h1>Sofa</h1>
 	  	<p>Your life as a list. It's great. Longer sentence. Test test test.</p>
 		<p>
-			<%= link_to "Sign Up", "#" %>
+			<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-large" %>
 		</p>
-  </div>
 </div>
 
+<% end %>
