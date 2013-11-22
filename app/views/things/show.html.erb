@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="span6 offset3">
+		<div class="well">
+			<p>
+			  <%= @thing.description %>
+			</p>
+				<%= link_to 'Edit', edit_thing_path(@thing) %> |
+				<%= link_to 'Back', things_path %>
+		</div>
+	</div>
+</div>

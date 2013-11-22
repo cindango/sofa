@@ -1,5 +1,8 @@
 Sofa::Application.routes.draw do
 
+  resources :things
+
+
   devise_for :users
 
 	get 'about' => 'pages#about'
