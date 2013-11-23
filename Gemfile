@@ -4,6 +4,8 @@ gem 'rails', '3.2.9'
 gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
+gem 'jquery-ui-rails'
+gem 'bootstrap-datepicker-rails'
 
 group :production do
   gem 'pg'

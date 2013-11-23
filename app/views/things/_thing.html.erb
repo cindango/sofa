@@ -1,8 +1,16 @@
-<tr>
-  <td><%= thing.description %></td>
-  <td><%= link_to 'Show', thing %></td>
-  <% if current_user == thing.user %>
-  	<td><%= link_to 'Edit', edit_thing_path(thing) %></td>
-  	<td><%= link_to 'Destroy', thing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  <% end %>
-</tr>
+<div class="single-thing">
+	<div class="date">
+		<% if thing.the_date.present? %>
+			<%= thing.the_date.to_s(:variable) %>
+		<% end %>
+	</div>
+	
+	<div class="desc">
+		<%= link_to thing.description, thing %>
+	</div>
+	
+	<div class="actions">
+		<%= link_to 'Edit', edit_thing_path(thing) %>
+		<%= link_to 'Delete', thing, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</div>
+</div>

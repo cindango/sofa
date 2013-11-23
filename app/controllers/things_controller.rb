@@ -1,6 +1,7 @@
 class ThingsController < ApplicationController
 	before_filter :authenticate_user!
 	
+	
   # GET /things
   # GET /things.json
   def index
@@ -46,7 +47,7 @@ class ThingsController < ApplicationController
 
     respond_to do |format|
       if @thing.save
-        format.html { redirect_to @thing, notice: 'Thing was successfully created.' }
+        format.html { redirect_to things_path, notice: 'Beautiful.' }
         format.json { render json: @thing, status: :created, location: @thing }
       else
         format.html { render action: "new" }

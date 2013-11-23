@@ -1,14 +1,120 @@
 @import 'bootstrap';
+@font-face { font-family: 'Aux Bold'; src: url('http://cindyho.co/sofa/fonts/aaux_pro_bd.ttf'); } 
+@font-face { font-family: 'Aux Black'; src: url('http://cindyho.co/sofa/fonts/aaux_pro_blk.ttf'); } 
 
 body {
-	padding-top: 130px
+	padding-top: 100px;
+	font-family: 'Aux Bold';
+	letter-spacing: 1px;
+}
+
+h1.today, h1.page {
+	text-align: center;
+	font-size: 56px;
+}
+
+h1, p {
+	text-align: center;
+}
+.container {
+	.page-content {
+		font-size: 24px;
+		line-height: 44px;
+		word-spacing: 6px;
+		max-width: 700px;
+		text-align: center;
+		margin: 100px auto 0;
+	}
+}
+h6.today {
+	text-align: center;
+	font-size: 24px;
+	margin-top: 20px;
+}
+
+.things {
+	text-align: center;
+	margin: 0 auto;
+	.single-thing {
+		padding: 50px 0;
+		border-top: 1px dashed #ddd;
+		&:last-child {
+			border-bottom: 1px dashed #ddd;
+		}
+	}
+}
+
+.date {
+	font-size: 24px;
+}
+.desc {
+	font-size: 40px;
+	line-height: 50px;
+	padding: 15px 0;
+	a {
+		color: #333;
+		&:hover {
+			text-decoration: none;
+			color: #aaa;
+		}
+	}
+}
+
+.actions {
+	margin-top: 10px;
+	a {
+		color: #ddd;
+	}
+}
+
+.alert {
+	text-align: center;
+	max-width: 400px;
+	margin: 0 auto 100px;
+}
+
+.navbar {
+	margin-top: 30px;
+	text-transform: uppercase;
+	.add {
+		
+	}
+}
+
+.add-new {
+	textarea, input {
+		font-size: 40px;
+		line-height: 50px;
+		height: auto;
+		padding: 0;
+		width: 100%;
+		font-family: 'Aux Bold';
+		border-bottom: 1px solid #ccc !important;
+		border: 0;
+		box-shadow: none;
+		border-radius: 0;
+		resize: none;
+	}
+	.hasDatepicker {
+		line-height: 120px;
+	}
+	label {
+		display: none;
+	}
 }
 
 .footer {
-	margin-top: 50px;
-	color: $grayLight;
+	margin: 100px 0;
+	color: #ddd;
+	text-align: center;
+	.sofa {
+		font-size: 24px;
+	}
 	a {
-		color: $gray;
+		color: #aaa;
+	}
+	sup {
+		font-size: small;
 	}
 }
 

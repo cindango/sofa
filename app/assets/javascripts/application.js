@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+//= require jquery.ui.all
+
+$(function() {
+    $( "#datepicker" ).datepicker({ dateFormat: "MM dd, yy" });
+  });

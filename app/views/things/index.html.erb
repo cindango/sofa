@@ -1,20 +1,8 @@
-<h1>Listing things</h1>
 
-<table class="table table-striped">
-	<thead>
-	  <tr>
-	    <th>Description</th>
-	    <th></th>
-	    <th></th>
-	    <th></th>
-	  </tr>
-	</thead>
-	
-	<tbody>
-		 <%= render @things %>
-	</tbody>
-</table>
 
-<br />
+<div class="things">
+	<%= render @things %>
+</div>
 
-<%= link_to 'New Thing', new_thing_path %>
+
+
