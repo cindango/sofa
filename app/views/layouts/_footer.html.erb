@@ -1,13 +1,13 @@
 <div class="footer">
 	<% if user_signed_in? %>
-		<div class="sofa">You're using <%= link_to 'SOFA', about_path %> <sup>alpha</sup></div>
+		<div class="sofa">You're using <%= link_to 'Sofa', about_path %> <sup>alpha</sup></div>
 		<% else %>
-		<div class="sofa">What's <%= link_to 'SOFA', about_path %>?</div>
+		<div class="sofa">What is <%= link_to 'Sofa', about_path %>?</div>
 	<% end %>
 	
 	<% if user_signed_in? %>
 		<br><br>
-		 <%= link_to "Edit Profile", edit_user_registration_path %>
+		 <%= link_to "Account", edit_user_registration_path %>
 		 &middot;
 		 <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 	 <% end %>

@@ -47,7 +47,7 @@ class ThingsController < ApplicationController
 
     respond_to do |format|
       if @thing.save
-        format.html { redirect_to things_path, notice: 'Beautiful.' }
+        format.html { redirect_to things_path }
         format.json { render json: @thing, status: :created, location: @thing }
       else
         format.html { render action: "new" }
@@ -63,7 +63,7 @@ class ThingsController < ApplicationController
 
     respond_to do |format|
       if @thing.update_attributes(params[:thing])
-        format.html { redirect_to @thing, notice: 'Thing was successfully updated.' }
+        format.html { redirect_to @thing }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

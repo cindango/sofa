@@ -17,5 +17,5 @@
 //= require jquery.ui.all
 
 $(function() {
-    $( "#datepicker" ).datepicker({ dateFormat: "MM dd, yy" });
-  });
+  $( "#datepicker" ).datepicker({ dateFormat: "MM dd, yy", minDate: 0 });
+ });

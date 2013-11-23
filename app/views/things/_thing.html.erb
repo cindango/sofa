@@ -1,8 +1,6 @@
 <div class="single-thing">
 	<div class="date">
-		<% if thing.the_date.present? %>
-			<%= thing.the_date.to_s(:variable) %>
-		<% end %>
+		<span class="full-date"><%= thing.the_date.strftime("%A %b %d") %></span>
 	</div>
 	
 	<div class="desc">
@@ -10,7 +8,7 @@
 	</div>
 	
 	<div class="actions">
-		<%= link_to 'Edit', edit_thing_path(thing) %>
-		<%= link_to 'Delete', thing, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<%= link_to "<i class=\"icon-pencil\"></i>".html_safe, edit_thing_path(thing) %>
+		<%= link_to "<i class=\"icon-remove\"></i>".html_safe, thing, method: :delete, data: { confirm: 'Are you sure?' } %>
 	</div>
 </div>

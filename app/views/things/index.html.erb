@@ -1,7 +1,8 @@
-
-
 <div class="things">
-	<%= render @things %>
+	<% if @things.blank? %>
+	<h1>Nothing yet...</h1>
+	<% end %>
+	<%= render @things.sort_by! &:the_date %>
 </div>
 
 

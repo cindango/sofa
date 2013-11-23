@@ -1,16 +1,15 @@
-<div class="row">
-	<div class="span6 offset3">
-		<div class="well">
-			<p>
-			  <%= @thing.description %>
-			</p>
-			<p>
-			  <%= @thing.user.name %>
-			</p>
-				<% if current_user == @thing.user %>
-					<%= link_to 'Edit', edit_thing_path(@thing) %> |
-				<% end %>
-				<%= link_to 'Back', things_path %>
-		</div>
+<div class="page-content show">
+	<span class="full-date"><%= @thing.the_date.strftime("%A %b %d") %></span>
+	<h1>
+	  <%= @thing.description %>
+	</h1>
+	<p>
+	  <%= @thing.user.name %>
+	</p>
+	<div class="actions">
+		<% if current_user == @thing.user %>
+			<%= link_to "<i class=\"icon-pencil\"></i>".html_safe, edit_thing_path(@thing) %>
+			<%= link_to "<i class=\"icon-remove\"></i>".html_safe, @thing, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
 	</div>
 </div>
