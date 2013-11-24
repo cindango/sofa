@@ -7,8 +7,12 @@ body {
 	letter-spacing: 1px;
 	padding-top: 100px;
 }
-a:hover {
-	text-decoration: none;
+a {
+	color: #31a348;
+	&:hover {
+		text-decoration: none;
+		color: #298e3d;
+	}
 }
 h1.today, h1.page {
 	text-align: center;
@@ -41,7 +45,7 @@ h6.today {
 	text-align: center;
 	margin: 0 auto;
 	.single-thing {
-		padding: 10px 0;
+		padding: 10px 0 30px;
 		position: relative;
 		.date {
 			font-size: 24px;
@@ -79,7 +83,7 @@ h6.today {
 }
 
 .actions {
-	margin-top: 30px;
+	margin-top: 10px;
 	a {
 		opacity: .2;
 		padding: 5px;
@@ -103,11 +107,11 @@ h6.today {
 
 .navbar {
 	margin-top: 30px;
-	.nav > li > a {
+	.nav > li > a, .brand {
 		color: #333;
-	}
-	.brand {
-		color: #333;
+		&:hover {
+			color: #31a348;
+		}
 	}
 	.add {
 		cursor: pointer;
@@ -166,10 +170,22 @@ h6.today {
 			font-weight: bold;
 			font-size: 48px;
 			text-transform: uppercase;
-			padding: 15px 0;
+			padding-bottom: 25px;
 			background-color: #fff;
 			background-image: none !important;
 			margin-bottom: 50px;
+			width: auto;
+			&:hover {
+				color: #31a348 !important;
+			}
+			&:focus {
+				box-shadow: none;
+				outline: none;
+			}
+			&:active {
+				padding-top: 5px;
+				padding-bottom: 20px;
+			}
 		}
 		&.create {
 			.btn {
@@ -220,13 +236,18 @@ h6.today {
 	}
 	a {
 		color: #aaa;
+		&:hover {
+			color: #31a348;
+		}
 	}
 	sup {
 		font-size: small;
 	}
 }
 
-
+.control-group.error input, .control-group.error select, .control-group.error textarea {
+	box-shadow: none;
+}
 
 
 @import 'bootstrap-responsive';
