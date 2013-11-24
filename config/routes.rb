@@ -8,6 +8,7 @@ Sofa::Application.routes.draw do
 	
 	get 'things' => 'things#index'
 	
+		
 	authenticated :user do
   	root :to => "things#index"
 	end

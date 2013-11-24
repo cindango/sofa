@@ -15,8 +15,6 @@
 //= require bootstrap
 //= require_tree .
 //= require jquery.ui.all
-//= require jquery.purr
-//= require best_in_place
 //= require jquery.autosize
 
 $(function() {
@@ -25,17 +23,16 @@ $(function() {
  
 $(document).ready(function() {
   /* Activating Best In Place */
-  $(".best_in_place").best_in_place({ event: "dblclick" });
   
   $('textarea').autosize(); 
   
   $( ".nav .add" ).click(function() {
-	  $( ".things" ).toggle("fade");
+	  $( ".ghost" ).toggle("fade");
 	  $( ".footer" ).toggle("fade");
 	});
 	
 	$( ".cancel" ).click(function() {
-	  $( ".things" ).toggle("fade");
+	  $( ".ghost" ).toggle("fade");
 	  $( ".footer" ).toggle("fade");
 	});
 	

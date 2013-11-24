@@ -1,4 +1,4 @@
-<div id="add-new">
+<div id="add-new" class="accordion-body collapse">
 	<%= simple_form_for :thing do |f| %>
 	  <%= f.error_notification %>
 	
@@ -9,6 +9,6 @@
 	  <div class="submit create">
 	    <%= f.button :submit, "+" %>
 	  </div>
-	  <%= link_to 'Cancel', root_path %>
+	  <a data-toggle="collapse" data-target="#add-new" class="cancel" style="cursor:pointer;">Cancel</a>
 	<% end %>
 </div>

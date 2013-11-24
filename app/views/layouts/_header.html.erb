@@ -14,14 +14,14 @@
 
                 <div class="nav-collapse">
                     <ul class="nav pull-right">
-                    	<% if user_signed_in? %>
-                      	<% if current_page?(root_url) %>
-                      		<li><a data-toggle="collapse" data-target="#add-new" class="add" href="#"><i class="icon-plus"></i> Add</a></li>
-													<% else %>
-													<li><%= link_to "<i class=\"icon-plus\"></i> Add".html_safe, new_thing_path, class: "add" %></li>
-												<% end %>
-												<% else %>
-													<li><%= link_to "Sign In", new_user_session_path %></li>
+                            <% if user_signed_in? %>
+                              <% if current_page?(root_url) %>
+                          <li><a data-toggle="collapse" data-target="#add-new" class="add" href="#"><i class="icon-plus"></i> Add</a></li>
+                                <% else %>
+                                <li><%= link_to "<i class=\"icon-plus\"></i> Add".html_safe, new_thing_path, class: "add" %></li>
+                        <% end %>
+                        <% else %>
+                                <li><%= link_to "Sign In", new_user_session_path %></li>
                       <% end %>
                     </ul>
                 </div>

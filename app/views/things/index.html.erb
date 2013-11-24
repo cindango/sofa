@@ -1,19 +1,5 @@
-<div class="page-content" style="margin-top: 0;">
-	<div id="add-new" class="accordion-body collapse">
-		<%= simple_form_for :thing do |f| %>
-		  <%= f.error_notification %>
-		
-		  <%= f.input :description, as: :text, input_html: { rows: "1", placeholder: "What?"} %>
-		  <%= f.input :the_date, as: :string, input_html: { id: "datepicker", placeholder: "When?"} %>
-		  
-		
-		  <div class="submit create">
-		    <%= f.button :submit, "+" %>
-		  </div>
-		  <a data-toggle="collapse" data-target="#add-new" class="cancel" style="cursor:pointer;">Cancel</a>
-		<% end %>
-	</div>
-	
+<%= render 'form_inline' %>
+<div class="page-content ghost" style="margin-top: 0;">
 	<div class="things">
 		<% if @things.blank? %>
 		<h1><%= link_to "+ Add Something", new_thing_path, class: "add" %></h1>

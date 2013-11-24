@@ -23,6 +23,10 @@ h1, p {
 	text-align: center;
 }
 .container {
+	animation: fadein .3s;
+    -moz-animation: fadein .3s; /* Firefox */
+    -webkit-animation: fadein .3s; /* Safari and Chrome */
+    -o-animation: fadein .3s; /* Opera */
 	.page-content {
 		max-width: 700px;
 		text-align: center;
@@ -55,12 +59,8 @@ h6.today {
 		.desc {
 			font-size: 40px;
 			line-height: 50px;
-			max-width: 700px;
-			margin: 0 auto;
-			span {
-				display: block;
-				margin-top: 15px;
-			}
+			max-width: 650px;
+			margin: 15px auto 0;
 			a {
 				color: #333;
 				&:hover {
@@ -102,7 +102,7 @@ h6.today {
 .alert {
 	text-align: center;
 	max-width: 400px;
-	margin: 0 auto 100px;
+	margin: -100px auto 60px;
 }
 
 .navbar {
@@ -115,6 +115,19 @@ h6.today {
 	}
 	.add {
 		cursor: pointer;
+	}
+}
+
+#add-new, #edit {
+	width: 100%;
+	max-width: 650px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.edit-thing {
+	textarea {
+		height: auto !important;
 	}
 }
 
@@ -197,7 +210,7 @@ h6.today {
 }
 
 #ui-datepicker-div {
-	width: 700px;
+	width: 650px;
 	padding: 0;
 	font-family: 'Aux Bold';
 	font-size: 30px;
@@ -245,8 +258,49 @@ h6.today {
 	}
 }
 
+
+
+
 .control-group.error input, .control-group.error select, .control-group.error textarea {
 	box-shadow: none;
+	&:focus {
+		border: 0 !important;
+		box-shadow: none !important;
+		outline: none !important;
+	}
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
