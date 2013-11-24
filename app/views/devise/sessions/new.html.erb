@@ -3,7 +3,7 @@
 	<div class="page-content">
 		<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 		
-		  <%= f.input :email, input_html: { placeholder: "Email"} %>
+		  <%= f.input :email, input_html: { placeholder: "Email", autocomplete: "off"} %>
 		  <%= f.input :password, input_html: { placeholder: "Password"} %>
 		  <%= f.input :remember_me, as: :boolean %>
 		

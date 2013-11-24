@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
             </a>
             <% if user_signed_in? %>
-	            <%= link_to DateTime.now.to_date.strftime("Today is %A %b %d"),  things_path, class: 'brand' %>
+	            <%= link_to DateTime.now.to_date.strftime("Today is %A %b %d"),  root_path, class: 'brand' %>
 	            <% else %>
 	            <%= link_to "Sofa", root_path, class: 'brand' %>
 	          <% end %>
@@ -15,7 +15,7 @@
                 <div class="nav-collapse">
                     <ul class="nav pull-right">
                         <% if user_signed_in? %>
-	                        <li><%= link_to "+", new_thing_path, class: "add" %></li>
+	                        <li><a data-toggle="collapse" data-target="#add-new" class="add" href="#"><i class="icon-plus"></i> Add</a></li>
 												<% else %>
 													<li><%= link_to "Sign In", new_user_session_path %></li>
                       <% end %>

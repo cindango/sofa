@@ -3,9 +3,6 @@
 	<h1>
 	  <%= @thing.description %>
 	</h1>
-	<p>
-	  <%= @thing.user.name %>
-	</p>
 	<div class="actions">
 		<% if current_user == @thing.user %>
 			<%= link_to "<i class=\"icon-pencil\"></i>".html_safe, edit_thing_path(@thing) %>

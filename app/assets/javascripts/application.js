@@ -15,7 +15,26 @@
 //= require bootstrap
 //= require_tree .
 //= require jquery.ui.all
+//= require jquery.purr
+//= require best_in_place
 
 $(function() {
   $( "#datepicker" ).datepicker({ dateFormat: "MM dd, yy", minDate: 0 });
  });
+ 
+$(document).ready(function() {
+  /* Activating Best In Place */
+  $(".best_in_place").best_in_place({ event: "dblclick" });
+  
+  $( ".nav .add" ).click(function() {
+	  $( ".things" ).toggle("fade");
+	  $( ".footer" ).toggle("fade");
+	});
+	
+	$( ".cancel" ).click(function() {
+	  $( ".things" ).toggle("fade");
+	  $( ".footer" ).toggle("fade");
+	});
+	
+  
+});
