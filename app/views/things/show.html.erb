@@ -1,12 +1,20 @@
-<div class="page-content show">
-	<span class="full-date"><%= @thing.the_date.strftime("%A %b %d") %></span>
-	<h1>
-	  <%= @thing.description %>
-	</h1>
-	<div class="actions">
-		<% if current_user == @thing.user %>
-			<%= link_to "<i class=\"icon-pencil\"></i>".html_safe, edit_thing_path(@thing) %>
-			<%= link_to "<i class=\"icon-remove\"></i>".html_safe, @thing, method: :delete, data: { confirm: 'Are you sure?' } %>
-		<% end %>
+<div class="page-content" style="margin-top: 0;">
+	<div class="things">
+		<div class="single-thing">
+			<div class="date">
+				<%= relative_date(@thing) %>
+			</div>
+			
+			<div class="desc">
+				<%= @thing.description %>
+			</div>
+			
+			<div class="actions">
+				<%= link_to "<i class=\"icon-pencil\"></i>".html_safe, edit_thing_path(@thing) %>
+				<%= link_to "<i class=\"icon-remove\"></i>".html_safe, @thing, method: :delete, data: { confirm: 'Are you sure?' } %>
+			</div>
+		</div>
+		<br>
+		<%= link_to 'Back to everything', root_path %>
 	</div>
 </div>

@@ -2,7 +2,7 @@
 	<h1>Edit</h1>
 	<div class="page-content">
 		<div id="edit">
-			<%= simple_form_for :thing do |f| %>
+			<%= simple_form_for(@thing) do |f| %>
 			  <%= f.error_notification %>
 			
 			  <%= f.input :description, as: :text, input_html: { rows: "1", placeholder: "What?"} %>
@@ -12,6 +12,8 @@
 			  <div class="submit create">
 			    <%= f.button :submit, "+" %>
 			  </div>
+			  <%= link_to "Delete", @thing, method: :delete, data: { confirm: 'Are you sure?' } %>
+			  &nbsp;&middot;&nbsp;
 			  <%= link_to 'Cancel', root_path %>
 			<% end %>
 		</div>
