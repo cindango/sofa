@@ -101,7 +101,7 @@ h6.today {
 .alert {
 	text-align: center;
 	max-width: 400px;
-	margin: -100px auto 60px;
+	margin: -30px auto 60px;
 }
 
 .navbar {
@@ -292,6 +292,12 @@ form.thing {
 		outline: none !important;
 	}
 }
+
+
+.control-group.error .control-label, .control-group.error .help-block, .control-group.error .help-inline {
+	margin-bottom: 30px;
+}
+
 
 @keyframes fadein {
     from {

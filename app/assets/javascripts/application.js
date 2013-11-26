@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require bootstrap-tooltip.js
+//= require bootstrap-confirmation.js
 //= require_tree .
 //= require jquery.ui.all
 //= require jquery.autosize
@@ -25,7 +27,7 @@ $(function() {
 	  format: 'on mmmm d, yyyy',
 	  max: 0,
 	  min: true,
-	  clear: false
+	  clear: false,
   });
  });
  
@@ -44,6 +46,10 @@ $(document).ready(function() {
 	  $( ".ghost" ).toggle("fade");
 	  $( ".footer" ).toggle("fade");
 	});
+	
+	$('[data-toggle="confirmation"]').confirmation({
+		popout: true
+	})
 	
 });
 
