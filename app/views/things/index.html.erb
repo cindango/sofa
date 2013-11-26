@@ -1,9 +1,10 @@
 <%= render 'form_inline' %>
 <div class="page-content ghost" style="margin-top: 0;">
-	<div class="things">
+	<div class="things" id="sortable">
 		<% if @things.blank? %>
 		<h1><%= link_to "+ Add Something", new_thing_path, class: "add" %></h1>
 		<% end %>
 		<%= render @things.sort_by! &:the_date %>
 	</div>
 </div>
+

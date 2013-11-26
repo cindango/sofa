@@ -5,13 +5,15 @@ class ThingsController < ApplicationController
   # GET /things
   # GET /things.json
   def index
-    @things = current_user.things.all
+    @things = current_user.things.where('the_date >= ?', Date.today )
+    
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @things }
     end
   end
+  
 
   # GET /things/1
   # GET /things/1.json

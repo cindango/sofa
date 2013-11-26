@@ -7,6 +7,8 @@ gem 'simple_form'
 gem 'jquery-ui-rails'
 gem 'bootstrap-datepicker-rails'
 gem 'pickadate-rails'
+gem 'groupdate'
+gem 'whenever', :require => false
 
 group :production do
   gem 'pg'
