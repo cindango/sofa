@@ -16,9 +16,17 @@
 //= require_tree .
 //= require jquery.ui.all
 //= require jquery.autosize
+//= require pickadate/picker
+//= require pickadate/picker.date
+//= require pickadate/picker.time
 
 $(function() {
-  $( "#datepicker" ).datepicker({ dateFormat: "MM dd, yy", minDate: 0 });
+  $( "#datepicker" ).pickadate({
+	  format: 'on mmmm d, yyyy',
+	  max: 0,
+	  min: true,
+	  clear: false
+  });
  });
  
 $(document).ready(function() {
@@ -27,6 +35,7 @@ $(document).ready(function() {
   $('textarea').autosize(); 
   
   $( ".nav .add" ).click(function() {
+	  $(".thing_description textarea").focus();
 	  $( ".ghost" ).toggle("fade");
 	  $( ".footer" ).toggle("fade");
 	});

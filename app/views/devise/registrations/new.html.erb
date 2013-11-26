@@ -5,7 +5,7 @@
 		<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 		  <%= f.error_notification %>
 		
-		  <%= f.input :name, input_html: { placeholder: "Name", autocomplete: "off" } %>
+		  <%= f.input :name, :autofocus => true, input_html: { placeholder: "Name", autocomplete: "off" } %>
 		  <%= f.input :email, input_html: { placeholder: "Email", autocomplete: "off" } %>
 		  <%= f.input :password, input_html: { placeholder: "Password"} %>
 		

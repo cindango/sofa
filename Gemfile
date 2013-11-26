@@ -6,6 +6,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'jquery-ui-rails'
 gem 'bootstrap-datepicker-rails'
+gem 'pickadate-rails'
 
 group :production do
   gem 'pg'
