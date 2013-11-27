@@ -5,7 +5,7 @@ class ThingsController < ApplicationController
   # GET /things
   # GET /things.json
   def index
-    @things = current_user.things.where('the_date >= ?', Date.today )
+    @things = current_user.things.where('the_date >= ?', Date.today ).order('the_date ASC')
     @thing_day = @things.group_by { |t| t.the_date }
     
     respond_to do |format|
