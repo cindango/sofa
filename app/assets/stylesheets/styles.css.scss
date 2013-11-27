@@ -6,6 +6,7 @@ body {
 	font-family: 'Aux Bold';
 	letter-spacing: 1px;
 	padding-top: 100px;
+	color: #424140;
 }
 a {
 	color: #31a348;
@@ -64,16 +65,13 @@ h6.today {
 		}
 		.single-thing {
 			position: relative;
+			margin: 10px 0;
 			.desc {
 				font-size: 40px;
 				line-height: 54px;
-				margin: 5px auto;
-				a {
-					color: #333;
-					&:hover {
-						text-decoration: none;
-						color: #aaa;
-					}
+				margin: 0 auto;
+				&:hover {
+					color: #000;
 				}
 				&.done {
 					text-decoration: line-through;
@@ -96,7 +94,6 @@ h6.today {
 }
 
 .actions {
-	margin-top: 10px;
 	a {
 		opacity: .2;
 		padding: 5px;
@@ -123,7 +120,7 @@ h6.today {
 .navbar {
 	margin-top: 30px;
 	.nav > li > a, .brand {
-		color: #333;
+		color: #424140;
 		&:hover {
 			color: #31a348;
 		}
@@ -187,7 +184,7 @@ form.thing {
 		border-radius: 0;
 		resize: none;
 		text-align: center;
-		color: #333 !important;
+		color: #424140 !important;
 		background-color: #fff !important;
 		&::-webkit-input-placeholder {
 			color: #e5e5e5;
@@ -212,7 +209,7 @@ form.thing {
 	}
 	.form_in_place input {
 			&:focus {
-			color: #333;
+			color: #424140;
 			letter-spacing: 1px;
 		}
 	}
