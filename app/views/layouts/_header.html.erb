@@ -1,18 +1,13 @@
 <div class="navbar navbar-fixed-top">
     <div class="">
         <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
             <% if user_signed_in? %>
 	            <%= link_to DateTime.now.to_date.strftime("Today is %A %b %d"),  root_path, class: 'brand' %>
 	            <% else %>
 	            <%= link_to "Sofa", root_path, class: 'brand' %>
 	          <% end %>
 
-                <div class="nav-collapse">
+                <div class="">
                     <ul class="nav pull-right">
                             <% if user_signed_in? %>
                               <% if current_page?(root_path) %>

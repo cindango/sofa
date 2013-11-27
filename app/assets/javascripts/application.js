@@ -38,18 +38,22 @@ $(document).ready(function() {
   
   $( ".nav .add" ).click(function() {
 	  $(".thing_description textarea").focus();
-	  $( ".ghost" ).toggle("fade");
+	  $( ".ghost" ).toggle("fade", 500);
 	  $( ".footer" ).toggle("fade");
 	});
 	
 	$( ".cancel" ).click(function() {
-	  $( ".ghost" ).toggle("fade");
+	  $( ".ghost" ).toggle("fade", 500);
 	  $( ".footer" ).toggle("fade");
 	});
 	
 	$('[data-toggle="confirmation"]').confirmation({
 		popout: true
 	})
+	
+	$( ".desc" ).click(function() {
+		$(this).toggleClass("done", "addorRemove").animate(0);
+	});
 	
 });
 

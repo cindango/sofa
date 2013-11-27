@@ -67,6 +67,11 @@ h6.today {
 					color: #aaa;
 				}
 			}
+			&.done {
+				text-decoration: line-through;
+				color: #ddd;
+
+			}
 		}
 		&:last-child {
 		}
@@ -97,6 +102,8 @@ h6.today {
 		font-size: 48px;
 	}
 }
+
+
 
 .alert {
 	text-align: center;
@@ -137,6 +144,11 @@ h6.today {
 			background-color: #fff;
 			border: 0;
 		}
+	}
+	.picker__holder {
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		border: 1px solid #ddd;
 	}
 }
 
@@ -261,6 +273,7 @@ form.thing {
 
 .hero-unit {
 	background-color: #fff;
+	padding: 60px 0;
 }
 
 .footer {

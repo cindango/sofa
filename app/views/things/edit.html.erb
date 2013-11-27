@@ -9,8 +9,8 @@
 			  <%= f.input :the_date, as: :string, input_html: { id: "datepicker", placeholder: "When?", value: localize(f.object.the_date, :format => "on %B %d, %Y") } %>
 			  
 			
-			  <div class="submit create">
-			    <%= f.button :submit, "+" %>
+			  <div class="submit">
+			    <%= f.button :submit, "SAVE" %>
 			  </div>
 			  <%= link_to "Delete", @thing, method: :delete, data: { confirm: 'Are you sure?' } %>
 			  &nbsp;&middot;&nbsp;
