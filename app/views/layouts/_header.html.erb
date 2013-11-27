@@ -2,7 +2,7 @@
     <div class="">
         <div class="container">
             <% if user_signed_in? %>
-	            <%= link_to DateTime.now.to_date.strftime("Today is %A %b %d"),  root_path, class: 'brand' %>
+	            <%= link_to DateTime.now.to_date.strftime("Today is %A, %b %e"),  root_path, class: 'brand' %>
 	            <% else %>
 	            <%= link_to "Sofa", root_path, class: 'brand' %>
 	          <% end %>

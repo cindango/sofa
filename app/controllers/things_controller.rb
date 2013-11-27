@@ -6,13 +6,14 @@ class ThingsController < ApplicationController
   # GET /things.json
   def index
     @things = current_user.things.where('the_date >= ?', Date.today )
+    @thing_day = @things.group_by { |t| t.the_date }
     
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @things }
     end
   end
+
   
 
   # GET /things/1

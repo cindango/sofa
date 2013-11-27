@@ -3,6 +3,7 @@
 <% else %>
 
 <div class="hero-unit">
+		<div style="text-align: center; margin-bottom: 25px;"><%= DateTime.now.to_date.strftime("It's %A, %b %e") %></div>
 	  <h1>Organize yourself.</h1>
 		<p style="margin-top: 50px;">
 			<%= link_to "Sign Up", new_user_registration_path, class: "button" %>

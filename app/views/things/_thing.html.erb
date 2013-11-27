@@ -1,7 +1,13 @@
+<% things.sort.each do |things| %>
+
 <div class="single-thing" id="<%= thing.id %>">
+
 	<div class="date">
 		<%= relative_date(thing) %>
 	</div>
+	
+	<% for thing in things %>
+	
 	
 	<div class="desc">
 		<%= thing.description %>
@@ -11,4 +17,11 @@
 		<%= link_to "<i class=\"icon-pencil\"></i>".html_safe, edit_thing_path(thing) %>
 		<%= link_to "<i class=\"icon-remove\"></i>".html_safe, thing, class: "delete", method: :delete %>
 	</div>
+	
+	<% end %>
+	
+
 </div>
+
+
+<% end %>

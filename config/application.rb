@@ -62,7 +62,7 @@ module Sofa
     # required for Devise on Heroku
     config.assets.initialize_on_precompile = false
     
-    config.time_zone = 'Athens'
+    config.time_zone = 'America/New_York'
 	config.active_record.default_timezone = :local
   end
 end
