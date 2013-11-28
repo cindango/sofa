@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'ruby', '2.0.0'
 gem 'rails', '3.2.9'
 gem 'jquery-rails'
 gem 'devise'
@@ -9,7 +10,6 @@ gem 'bootstrap-datepicker-rails'
 gem 'pickadate-rails'
 gem 'groupdate'
 gem 'whenever', :require => false
-gem 'ajax'
 
 group :production do
   gem 'pg'
