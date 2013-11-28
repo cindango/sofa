@@ -64,5 +64,9 @@ module Sofa
     
     config.time_zone = 'America/New_York'
 	config.active_record.default_timezone = :local
+	
+	# Enable the asset pipeline
+	config.assets.enabled = true
+	config.assets.paths << "#{Rails.root}/app/assets/fonts" 
   end
 end
