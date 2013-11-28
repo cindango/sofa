@@ -9,6 +9,7 @@ gem 'bootstrap-datepicker-rails'
 gem 'pickadate-rails'
 gem 'groupdate'
 gem 'whenever', :require => false
+gem 'ajax'
 
 group :production do
   gem 'pg'

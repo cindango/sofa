@@ -1,27 +1,22 @@
-<% things.sort.each do |things| %>
-
-<div class="single-thing" id="<%= thing.id %>">
-
+<% @thing_day.each do |day, things| %>
+	<div id="day">
 	<div class="date">
-		<%= relative_date(thing) %>
+		<%= day.strftime('%A, %b %e') %>
 	</div>
 	
 	<% for thing in things %>
+		<div class="single-thing" id="<%= thing.id %>">
 	
-	
-	<div class="desc">
-		<%= thing.description %>
-	</div>
-	
-	<div class="actions">
-		<%= link_to "<i class=\"icon-pencil\"></i>".html_safe, edit_thing_path(thing) %>
-		<%= link_to "<i class=\"icon-remove\"></i>".html_safe, thing, class: "delete", method: :delete %>
-	</div>
-	
+			<div class="desc">
+				<%= thing.description %>
+			</div>
+			
+			<div class="actions">
+				<%= link_to "<i class=\"icon-pencil\"></i>".html_safe, edit_thing_path(thing) %>
+				<%= link_to "<i class=\"icon-remove\"></i>".html_safe, @thing, method: :delete %>
+			</div>
+		</div>
 	<% end %>
+	</div>
 	
-
-</div>
-
-
 <% end %>

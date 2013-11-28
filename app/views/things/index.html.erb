@@ -1,33 +1,11 @@
-<%= render 'form_inline' %>
-<div class="page-content ghost index" style="margin-top: 0;">
-	<div class="things" id="sortable">
+<div class="page-content index" style="margin-top: 0;">
+	<%= render 'form_inline' %>
+	<div class="things ghost" id="sortable">
 		<% if @things.blank? %>
 		<h1><%= link_to "+ Add Something", new_thing_path, class: "add" %></h1>
 		<% end %>
 		
-		<% @thing_day.each do |day, things| %>
-			<div id="day">
-			<div class="date">
-				<%= day.strftime('%A, %b %e') %>
-			</div>
-			
-			<% for thing in things %>
-				<div class="single-thing" id="<%= thing.id %>">
-			
-					<div class="desc">
-						<%= thing.description %>
-					</div>
-					
-					<div class="actions">
-						<%= link_to "<i class=\"icon-pencil\"></i>".html_safe, edit_thing_path(thing) %>
-						<%= link_to "<i class=\"icon-remove\"></i>".html_safe, thing, class: "delete", method: :delete %>
-					</div>
-				</div>
-			<% end %>
-			</div>
-			
-		<% end %>
+		<%= render 'thing' %>
 
 	</div>
 </div>
-

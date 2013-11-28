@@ -28,6 +28,7 @@ $(function() {
 	  max: 0,
 	  min: true,
 	  clear: false,
+	  today: false
   });
  });
  
@@ -38,12 +39,12 @@ $(document).ready(function() {
   
   $( ".nav .add" ).click(function() {
 	  $(".thing_description textarea").focus();
-	  $( ".ghost" ).toggle("fade", 500);
+	  $( ".ghost" ).toggle("fade", 300);
 	  $( ".footer" ).toggle("fade");
 	});
 	
 	$( ".cancel" ).click(function() {
-	  $( ".ghost" ).toggle("fade", 500);
+	  $( ".ghost" ).toggle("fade", 300);
 	  $( ".footer" ).toggle("fade");
 	});
 	
@@ -54,6 +55,8 @@ $(document).ready(function() {
 	$( ".index .desc" ).click(function() {
 		$(this).toggleClass("done", "addorRemove").animate(0);
 	});
+	
+
 	
 });
 

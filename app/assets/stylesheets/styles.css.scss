@@ -46,7 +46,10 @@ h6.today {
 	font-size: 24px;
 	margin-top: 20px;
 }
-
+.collapse { 
+	transition: height .5s;
+	position: static;
+	 }
 .index .desc {
 	cursor: pointer;
 }
@@ -158,17 +161,8 @@ h6.today {
 	}
 }
 
-form.thing {
-	min-height: 600px;
-}
 
-.edit-thing {
-	textarea {
-		height: auto !important;
-	}
-}
-
-#add-new, .add-new, .edit-thing, .session, .things {
+.add-new, .edit-thing, .session, .things {
 	h1 {
 		font-size: 48px;
 	}
