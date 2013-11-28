@@ -1,20 +1,20 @@
 <div class="page-content" style="margin-top: 0;">
 	<div class="things">
-		<div class="single-thing">
+		<div id="day">
 			<div class="date">
-				<%= relative_date(@thing) %>
+				<%= @thing.the_date.strftime('%A, %b %e') %>
 			</div>
-			
-			<div class="desc">
-				<%= @thing.description %>
-			</div>
-			
-			<div class="actions">
-				<%= link_to "<i class=\"icon-pencil\"></i>".html_safe, edit_thing_path(@thing) %>
-				<%= link_to "<i class=\"icon-remove\"></i>".html_safe, @thing, method: :delete %>
+			<div class="single-thing">
+				<div class="desc">
+					<%= @thing.description %>
+				</div>
+				
+				<div class="actions">
+					<%= link_to "<i class=\"icon-pencil\"></i>".html_safe, edit_thing_path(@thing) %>
+					<%= link_to "<i class=\"icon-remove\"></i>".html_safe, @thing, method: :delete %>
+				</div>
 			</div>
 		</div>
-		<br>
 		<%= link_to 'Back to everything', root_path %>
 	</div>
 </div>
