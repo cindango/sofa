@@ -37,7 +37,7 @@ $(document).ready(function() {
   
   $('textarea').autosize(); 
   
-  $( ".nav .add" ).click(function() {
+  $( ".add" ).click(function() {
 	  $(".thing_description textarea").focus();
 	  $( ".ghost" ).toggle("fade", 300);
 	  $( ".footer" ).toggle("fade");

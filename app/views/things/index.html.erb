@@ -2,7 +2,7 @@
 	<%= render 'form_inline' %>
 	<div class="things ghost" id="sortable">
 		<% if @things.blank? %>
-		<h1><%= link_to "+ Add Something", new_thing_path, class: "add" %></h1>
+		<h1><a class="add" data-toggle="collapse" data-target="#add-new" style="cursor: pointer;">+ Add Something</a></h1>
 		<% end %>
 		
 		<%= render 'thing' %>
