@@ -1,3 +1,3 @@
-# One Month Rails
+# Sofa
 
-Sample app blah blah blah
+Simple calendar app.
