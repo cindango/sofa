@@ -52,9 +52,9 @@ $(document).ready(function() {
 		popout: true
 	})
 	
-	$( ".index .desc" ).click(function() {
+	/*$( ".index .desc" ).click(function() {
 		$(this).toggleClass("done", "addorRemove").animate(0);
-	});
+	});*/
 	
 
 	

@@ -73,14 +73,14 @@ h6.today {
 				font-size: 40px;
 				line-height: 54px;
 				margin: 0 auto;
-				&:hover {
-					color: #000;
-				}
-				&.done {
-					text-decoration: line-through;
-					color: #ddd;
-	
-				}
+				//&:hover {
+				//	color: #000;
+				//}
+				//&.done {
+				//	text-decoration: line-through;
+				//	color: #ddd;
+				//
+				//}
 			}
 			&:last-child {
 			}
