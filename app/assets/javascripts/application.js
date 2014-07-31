@@ -30,6 +30,9 @@ $(function() {
 	  clear: false,
 	  today: false
   });
+  $( "#timepicker" ).pickatime({
+
+  });
  });
  
 $(document).ready(function() {
