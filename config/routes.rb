@@ -13,6 +13,8 @@ Sofa::Application.routes.draw do
 	end
 	
 	root :to => 'pages#home'
+
+  get 'complete/:id', to: 'things#complete', as: 'complete_thing'
 	
 	
 

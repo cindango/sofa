@@ -14,8 +14,6 @@ class ThingsController < ApplicationController
     end
   end
 
-  
-
   # GET /things/1
   # GET /things/1.json
   def show
@@ -85,5 +83,14 @@ class ThingsController < ApplicationController
       format.html { redirect_to things_url }
       format.json { head :no_content }
     end
+  end
+
+
+
+  # G's Custom Actions
+  def complete
+    redirect_to :back
+    @thing = current_user.things.find(params[:id])
+    @thing.update_attribute(:completed, true)
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140115040055) do
+ActiveRecord::Schema.define(:version => 20141028150912) do
 
   create_table "things", :force => true do |t|
     t.string   "description"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20140115040055) do
     t.integer  "user_id"
     t.date     "the_date"
     t.time     "time"
+    t.boolean  "completed"
   end
 
   add_index "things", ["the_date"], :name => "index_things_on_the_date"
