@@ -5,10 +5,10 @@
 		</div>
 		
 		<% for thing in things %>
-			<div class="single-thing" id="<%= thing.id %>">
+			<div class="single-thing <%= 'completed' if thing.completed == true %>" id="thing-<%= thing.id %>">
 		
-				<div class="desc <%= 'completed' if thing.completed == true %>">
-					<%= link_to thing.description, complete_thing_path(thing) %>
+				<div class="desc">
+					<%= link_to thing.description, complete_thing_path(thing), :remote => true %>
 				</div>
 				
 				<div class="actions">

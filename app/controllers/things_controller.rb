@@ -25,22 +25,6 @@ class ThingsController < ApplicationController
     end
   end
 
-  # GET /things/new
-  # GET /things/new.json
-  def new
-    @thing = current_user.things.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @thing }
-    end
-  end
-
-  # GET /things/1/edit
-  def edit
-    @thing = current_user.things.find(params[:id])
-  end
-
   # POST /things
   # POST /things.json
   def create
@@ -89,7 +73,7 @@ class ThingsController < ApplicationController
 
   # G's Custom Actions
   def complete
-    redirect_to :back
+    render :js => "document.getElementById('thing-"+params[:id]+"').className += ' completed';"
     @thing = current_user.things.find(params[:id])
     @thing.update_attribute(:completed, true)
   end
