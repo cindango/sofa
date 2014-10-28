@@ -1,5 +1,5 @@
 class Thing < ActiveRecord::Base
-  attr_accessible :description, :the_date
+  attr_accessible :description, :the_date, :completed
   
   validates :description, presence: true
   validates :the_date, presence: true 
