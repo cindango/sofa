@@ -8,7 +8,7 @@
 			<div class="single-thing <%= 'completed' if thing.completed == true %>" id="thing-<%= thing.id %>">
 		
 				<div class="desc">
-					<%= link_to thing.description, complete_thing_path(thing), :remote => true %>
+					<%= link_to thing.description, toggle_completed_thing_path(thing), :remote => true %>
 				</div>
 				
 				<div class="actions">

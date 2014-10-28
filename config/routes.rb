@@ -1,6 +1,8 @@
 Sofa::Application.routes.draw do
 
-  resources :things
+  resources :things do
+    get 'toggle_completed', :on => :member  
+  end  
 
   devise_for :users
 
@@ -13,8 +15,6 @@ Sofa::Application.routes.draw do
 	end
 	
 	root :to => 'pages#home'
-
-  get 'complete/:id', to: 'things#complete', as: 'complete_thing'
 	
 	
 

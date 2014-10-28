@@ -72,9 +72,14 @@ class ThingsController < ApplicationController
 
 
   # G's Custom Actions
-  def complete
-    render :js => "document.getElementById('thing-"+params[:id]+"').className += ' completed';"
-    @thing = current_user.things.find(params[:id])
-    @thing.update_attribute(:completed, true)
-  end
+  def toggle_completed
+    @thing = current_user.things.find(params[:id]) 
+    @thing.toggle!(:completed)
+
+    if @thing.completed == true
+      render :js => "document.getElementById('thing-"+params[:id]+"').className += ' completed';" 
+    else
+      render :js => "document.getElementById('thing-"+params[:id]+"').className = 'single-thing';" 
+    end
+  end  
 end
