@@ -14,6 +14,10 @@ class ThingsController < ApplicationController
     end
   end
 
+  def edit
+    @thing = current_user.things.find(params[:id])
+  end
+
   # GET /things/1
   # GET /things/1.json
   def show
